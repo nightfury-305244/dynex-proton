@@ -1,0 +1,30 @@
+import{jsx as _jsx}from"react/jsx-runtime";import React
+from"react";import{AccordionItem}from"https://framerusercontent.com/modules/xzVDKATTjAVB3DuoUSWj/c0QsMS0nTVoDAjAudypL/AccordionItem.js";import{addPropertyControls,ControlType}from"framer";const
+Accordion=({defaultIndex=0,sections=[]})=>{// Used to track the currently active
+(open) accordion item // Note: If we pass in -1, all items will be closed by
+default const[activeIndex,setActiveIndex]=React.useState(defaultIndex);// A
+handler for setting active accordion item const handleSetActiveIndex=n=>{// If
+the user clicks the active accordion item, close it
+if(n===activeIndex)setActiveIndex(-1);else setActiveIndex(n);};return
+/*#__PURE__*/
+_jsx("ul",{className:"accordion",style:ulStyle,children:sections.map((s,idx)=>/*#__PURE__*/
+_jsx(AccordionItem,{item:s,idx:idx,activeIndex:activeIndex,handleClick:handleSetActiveIndex},s.title))});};export
+default function Accode(props){const title1=props.title1?props.title1:"First
+Item Title";const body1=props.body1?props.body1:"Content for the first
+item";const title2=props.title2;const body2=props.body2;const
+title3=props.title3;const body3=props.body3;const title4=props.title4;const
+body4=props.body4;const
+data=[{title:title1,body:body1},title2&&{title:title2,body:body2},title3&&{title:title3,body:body3},title4&&{title:title4,body:body4},];return
+/*#__PURE__*/ _jsx(Accordion,{...props,sections:data});};const
+ulStyle={listStyle:"none",marging:0,padding:0,width:"100%",display:"flex",alignItems:"start",gap:"32px",flexDirection:"column"};addPropertyControls(Accode,{title1:{type:ControlType.String,title:"Title
+1"},body1:{type:ControlType.RichText,title:"Content
+1"},title2:{type:ControlType.String,title:"Title
+2"},body2:{type:ControlType.RichText,title:"Content
+2"},title3:{type:ControlType.String,title:"Title
+3"},body3:{type:ControlType.RichText,title:"Content
+3"},title4:{type:ControlType.String,title:"Title
+4"},body4:{type:ControlType.RichText,title:"Content
+4"}});Accode.defaultProps={title1:"First Item"}; export const __FramerMetadata__
+=
+{"exports":{"default":{"type":"reactComponent","name":"Accode","slots":[],"annotations":{"framerContractVersion":"1"}},"__FramerMetadata__":{"type":"variable"}}}
+//# sourceMappingURL=./Accode.map

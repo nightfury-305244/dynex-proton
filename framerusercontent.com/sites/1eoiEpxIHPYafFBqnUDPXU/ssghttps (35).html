@@ -1,0 +1,80 @@
+import{jsx as _jsx,jsxs as
+_jsxs}from"react/jsx-runtime";import{useState,useEffect}from"react";import{useInView}from"react-intersection-observer";import{addPropertyControls,ControlType}from"framer";import{CountUp}from"use-count-up";export
+default function
+ProtonStatsOnur(props){const[data,setData]=useState([]);useEffect(()=>{fetchData();},[]);//const
+url1 = "https://dynex.dyndns.org/apicached.php" const
+url1="https://api.dynexcoin.org/api.php";const
+url2="https://api.minerstat.com/v2/coins?list=DNX";const
+url3="https://api.market.dynexcoin.org/api/v2/network/info";const
+fetchData=async()=>{let response=await (await
+fetch(url3)).json();setData(response);// console.log("resp", response) };const
+value=props.Show||"hashrate";// console.log(value) const
+containerStyle={fontSize:props.fontSize,color:props.textColor,textAlign:props.textAlignment,fontFamily:'"Rigid
+Square Regular", Inter',lineHeight:1,margin:0};function
+roundIt(x,count){x=Math.round(Number(x)/count);return x.toFixed(0);}const
+Counter=({target,duration,suffix=null})=>{const[ref,inView]=useInView({threshold:.3,triggerOnce:true});return
+/*#__PURE__*/_jsxs("div",{ref:ref,children:[/*#__PURE__*/_jsx(CountUp,{isCounting:inView?true:false,start:0,end:target,thousandsSeparator:",",decimalSeparator:".",updateInterval:.05,//
+formatter={(result) => result.toLocaleString()}
+duration:duration}),suffix]});};return
+/*#__PURE__*/_jsx("div",{style:containerStyle,children:(()=>{//
+console.log(data) let result,suffix;switch(value){case"hashrate":var
+_data_block_header;result=roundIt(// @ts-ignore Number(data===null||data===void
+0?void
+0:(_data_block_header=data.block_header)===null||_data_block_header===void
+0?void 0:_data_block_header.hashrate),1e4);suffix="
+KH";break;case"blockheight":var _data_block_header1;// @ts-ignore
+result=data===null||data===void 0?void
+0:(_data_block_header1=data.block_header)===null||_data_block_header1===void
+0?void 0:_data_block_header1.height;break;case"nextreward":var // @ts-ignore
+_data_block_header2;result=roundIt(data===null||data===void 0?void
+0:(_data_block_header2=data.block_header)===null||_data_block_header2===void
+0?void 0:_data_block_header2.next_reward,1e9);suffix="
+DNX";break;case"transactions":var _data_block_header3;// @ts-ignore
+result=roundIt(data===null||data===void 0?void
+0:(_data_block_header3=data.block_header)===null||_data_block_header3===void
+0?void 0:_data_block_header3.tx_count,1);break;case"circulation":var //
+@ts-ignore _data_block_header4;result=roundIt(data===null||data===void 0?void
+0:(_data_block_header4=data.block_header)===null||_data_block_header4===void
+0?void 0:_data_block_header4.already_generated_coins,1e3);suffix="M
+DNX";break;case"total_supply":var // @ts-ignore
+_data_block_header5;result=roundIt(data===null||data===void 0?void
+0:(_data_block_header5=data.block_header)===null||_data_block_header5===void
+0?void 0:_data_block_header5.max_supply,1e15);suffix="M
+DNX";break;case"jobs_all":var _data_job_data;// @ts-ignore
+result=roundIt(data===null||data===void 0?void
+0:(_data_job_data=data.job_data)===null||_data_job_data===void 0?void
+0:_data_job_data.ALL_JOBS,1);suffix="";break;case"jobs_finished":var
+_data_job_data1;// @ts-ignore result=data===null||data===void 0?void
+0:(_data_job_data1=data.job_data)===null||_data_job_data1===void 0?void
+0:_data_job_data1.FINISHED_JOBS;suffix="";break;case"jobs_upcoming":var
+_data_job_data2;// @ts-ignore result=roundIt(data===null||data===void 0?void
+0:(_data_job_data2=data.job_data)===null||_data_job_data2===void 0?void
+0:_data_job_data2.UPCOMING_JOBS,1);suffix="";break;case"jobs_inprogress":var
+_data_job_data3;// @ts-ignore result=roundIt(data===null||data===void 0?void
+0:(_data_job_data3=data.job_data)===null||_data_job_data3===void 0?void
+0:_data_job_data3.INPROGRESS_JOBS,1);suffix="";break;case"solution_rewards":var
+_data_job_data4;// @ts-ignore result=roundIt(data===null||data===void 0?void
+0:(_data_job_data4=data.job_data)===null||_data_job_data4===void 0?void
+0:_data_job_data4.SOLUTION_REWARDS,1e9);suffix="
+DNX";break;case"dynex_chips":var _data_job_data5;// @ts-ignore
+result=roundIt(data===null||data===void 0?void
+0:(_data_job_data5=data.job_data)===null||_data_job_data5===void 0?void
+0:_data_job_data5.PROTONCHIPS,1);suffix="";break;case"gpus_total":var
+_data_job_data6;// @ts-ignore result=data===null||data===void 0?void
+0:(_data_job_data6=data.job_data)===null||_data_job_data6===void 0?void
+0:_data_job_data6.GPUS;suffix="";break;}// console.log(typeof result)
+result=parseFloat(result);return
+/*#__PURE__*/_jsx(Counter,{target:result,duration:1,suffix:suffix});})()});}addPropertyControls(ProtonStatsOnur,{Show:{type:ControlType.Enum,defaultValue:"solution_rewards",options:["hashrate","blockheight","nextreward","transactions","circulation","total_supply","jobs_all","jobs_finished","jobs_upcoming","jobs_inprogress","solution_rewards","dynex_chips","gpus_total"],optionTitles:["Hashrate","Block
+Height","Next Reward","Transactions","Circulation","All Jobs","Finished
+Jobs","Upcoming Jobs","Jobs in Progress","Solution Rewards","Proton Chips","Total
+GPUS"]},fontSize:{type:ControlType.Number,title:"Font
+Size"},textColor:{type:ControlType.Color},textAlignment:{type:ControlType.Enum,title:"Text
+Align",defaultValue:"left",displaySegmentedControl:true,//
+segmentedControlDirection: "vertical",
+options:["left","center","right"],optionTitles:["Left","Center","Right"]}});//
+Set the default value for each valueKey as well as the toggleKey by setting
+their values on `defaultProps`:
+ProtonStatsOnur.defaultProps={fontSize:16,textColor:"white",textAlignment:"left"};
+export const __FramerMetadata__ =
+{"exports":{"default":{"type":"reactComponent","name":"ProtonStatsOnur","slots":[],"annotations":{"framerContractVersion":"1"}},"__FramerMetadata__":{"type":"variable"}}}
+//# sourceMappingURL=./ProtonStatsOnur.map

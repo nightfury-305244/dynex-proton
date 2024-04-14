@@ -1,0 +1,51 @@
+import*as e from"react";function
+_extends(){_extends=Object.assign||function(e){for(var
+t=1;t<arguments.length;t++){var i=arguments[t];for(var n in
+i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n])}return e};return
+_extends.apply(this,arguments)}function
+_objectWithoutPropertiesLoose(e,t){if(null==e)return{};var i={};var
+n=Object.keys(e);var r,o;for(o=0;o<n.length;o++){r ="n[o];t.indexOf(r)"
+  >=0||(i[r]=e[r])}return i}const t=new Map;const i=new WeakMap;let n=0;let
+  r;function defaultFallbackInView(e){r=e} /** * Generate a unique ID for the
+  root element * @param root */function
+  getRootId(e){if(!e)return"0";if(i.has(e))return
+  i.get(e);n+=1;i.set(e,n.toString());return i.get(e)} /** * Convert the options
+  to a string Id, based on the values. * Ensures we can reuse the same observer
+  when observing elements with the same options. * @param options */function
+  optionsToId(e){return Object.keys(e).sort().filter((t=>void
+  0!==e[t])).map((t=>`${t}_${"root"===t?getRootId(e.root):e[t]}`)).toString()}function
+  createObserver(e){let i=optionsToId(e);let n=t.get(i);if(!n){const r=new
+  Map;let o;const s=new IntersectionObserver((t=>{t.forEach((t=>{var i;const
+  n=t.isIntersecting&&o.some((e=>t.intersectionRatio>=e));e.trackVisibility&&"undefined"===typeof
+  t.isVisible&&(t.isVisible=n);null==(i=r.get(t.target))?void
+  0:i.forEach((e=>{e(n,t)}))}))}),e);o=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]);n={id:i,observer:s,elements:r};t.set(i,n)}return
+  n} /** * @param element - DOM Element to observe * @param callback - Callback
+  function to trigger when intersection status changes * @param options -
+  Intersection Observer options * @param fallbackInView - Fallback inView value.
+  * @return Function - Cleanup function that should be triggered to unregister
+  the observer */function observe(e,i,n={},o=r){if("undefined"===typeof
+  window.IntersectionObserver&&void 0!==o){const
+  t=e.getBoundingClientRect();i(o,{isIntersecting:o,target:e,intersectionRatio:"number"===typeof
+  n.threshold?n.threshold:0,time:0,boundingClientRect:t,intersectionRect:t,rootBounds:t});return()=>{}}const{id:s,observer:l,elements:h}=createObserver(n);let
+  a=h.get(e)||[];h.has(e)||h.set(e,a);a.push(i);l.observe(e);return function
+  unobserve(){a.splice(a.indexOf(i),1);if(0===a.length){h.delete(e);l.unobserve(e)}if(0===h.size){l.disconnect();t.delete(s)}}}const
+  o=["children","as","triggerOnce","threshold","root","rootMargin","onChange","skip","trackVisibility","delay","initialInView","fallbackInView"];function
+  isPlainChildren(e){return"function"!==typeof e.children}class InView extends
+  e.Component{constructor(e){super(e);this.node=null;this._unobserveCb=null;this.handleNode=e=>{if(this.node){this.unobserve();e||this.props.triggerOnce||this.props.skip||this.setState({inView:!!this.props.initialInView,entry:void
+  0})}this.node=e||null;this.observeNode()};this.handleChange=(e,t)=>{e&&this.props.triggerOnce&&this.unobserve();isPlainChildren(this.props)||this.setState({inView:e,entry:t});this.props.onChange&&this.props.onChange(e,t)};this.state={inView:!!e.initialInView,entry:void
+  0}}componentDidUpdate(e){if(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay){this.unobserve();this.observeNode()}}componentWillUnmount(){this.unobserve();this.node=null}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:i,trackVisibility:n,delay:r,fallbackInView:o}=this.props;this._unobserveCb=observe(this.node,this.handleChange,{threshold:e,root:t,rootMargin:i,trackVisibility:n,delay:r},o)}unobserve(){if(this._unobserveCb){this._unobserveCb();this._unobserveCb=null}}render(){if(!isPlainChildren(this.props)){const{inView:e,entry:t}=this.state;return
+  this.props.children({inView:e,entry:t,ref:this.handleNode})}const
+  t=this.props,{children:i,as:n}=t,r=_objectWithoutPropertiesLoose(t,o);return
+  e.createElement(n||"div",_extends({ref:this.handleNode},r),i)}}function
+  useInView({threshold:t,delay:i,trackVisibility:n,rootMargin:r,root:o,triggerOnce:s,skip:l,initialInView:h,fallbackInView:a,onChange:c}={}){var
+  d;const[u,p]=e.useState(null);const
+  b=e.useRef();const[f,g]=e.useState({inView:!!h,entry:void
+  0});b.current=c;e.useEffect((()=>{if(l||!u)return;let
+  e;e=observe(u,((t,i)=>{g({inView:t,entry:i});b.current&&b.current(t,i);if(i.isIntersecting&&s&&e){e();e=void
+  0}}),{root:o,rootMargin:r,threshold:t,trackVisibility:n,delay:i},a);return()=>{e&&e()}}),[Array.isArray(t)?t.toString():t,u,o,r,s,l,n,a,i]);const
+  v=null==(d=f.entry)?void 0:d.target;const
+  y=e.useRef();if(!u&&v&&!s&&!l&&y.current!==v){y.current=v;g({inView:!!h,entry:void
+  0})}const V=[p,f.inView,f.entry];V.ref=V[0];V.inView=V[1];V.entry=V[2];return
+  V}export{InView,defaultFallbackInView,observe,useInView}; //#
+  sourceMappingURL=react-intersection-observer.modern.mjs.map</n.length;o++){r
+>

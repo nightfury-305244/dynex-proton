@@ -1,0 +1,66 @@
+.my-custom-scrollbar {
+  position: relative;
+  height: 193px;
+  overflow: auto;
+}
+.my-custom-scrollbar th {
+  position: sticky;
+  top: -1px;
+  background-color: #25282c;
+  z-index: 999;
+}
+.my-custom-scrollbar2 {
+  position: relative;
+  height: 275px;
+  overflow: auto;
+}
+.my-custom-scrollbar2 th {
+  position: sticky;
+  top: -1px;
+  background-color: #25282c;
+  z-index: 999;
+}
+.my-custom-scrollbar3 {
+  position: relative;
+  height: 300px;
+  overflow: auto;
+}
+.my-custom-scrollbar3 th {
+  position: sticky;
+  top: -1px;
+  background-color: #25282c;
+  z-index: 999;
+}
+.my-custom-scrollbar4 {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+}
+.my-custom-scrollbar4 th {
+  position: sticky;
+  top: -1px;
+  background-color: #25282c;
+  z-index: 999;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+.text-right {
+  text-align: right !important;
+}
+.footerHyperlink {
+  color: #66d8fa !important;
+}
+.fs25 {
+  font-size: 25px;
+}
+
+@media (max-width: 450px) {
+  .truncate {
+    max-width: 177px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: right;
+  }
+}
+/*# sourceMappingURL=custom.min.css.map */

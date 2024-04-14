@@ -1,0 +1,34 @@
+import{useEffect as e,useLayoutEffect as t,useState as r,useRef as n,useCallback
+as a}from"react";var u=Object.getOwnPropertySymbols;var
+o=Object.prototype.hasOwnProperty,l=Object.prototype.propertyIsEnumerable;var
+T=(e,t)=>{var r={};for(var n in
+e)o.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&u)for(var n of
+u(e))t.indexOf(n)<0&&l.call(e,n)&&(r[n]=e[n]);return r};var
+i=Object.defineProperty,p=Object.defineProperties,f=Object.getOwnPropertyDescriptors,s=Object.getOwnPropertySymbols,d=Object.prototype.hasOwnProperty,m=Object.prototype.propertyIsEnumerable,I=(e,t,r)=>t
+in
+e?i(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,x=(e,t)=>{for(var
+r in t||(t={}))d.call(t,r)&&I(e,r,t[r]);if(s)for(var r of
+s(t))m.call(t,r)&&I(e,r,t[r]);return e},U=(e,t)=>p(e,f(t)),y="undefined"==typeof
+window?e:t,h=({isPlaying:e,duration:t,startAt:u=0,updateInterval:o=0,onComplete:l,onUpdate:i})=>{let[p,f]=r(u),s=n(-1e3*u),d=n(null),m=n(null),b=n(null),v=n({elapsedTimeRef:0,startAtRef:u,durationRef:t,updateIntervalRef:o});v.current=U(x({},v.current),{durationRef:t,updateIntervalRef:o});let
+c=e=>{let
+t=e/1e3;if(null===m.current){m.current=t,d.current=requestAnimationFrame(c);return}let{durationRef:r,elapsedTimeRef:n,updateIntervalRef:a,startAtRef:u}=v.current,o=t-m.current,l=n+o;m.current=t,v.current=U(x({},v.current),{elapsedTimeRef:l});let
+i=u+(0===a?l:(l/a|0)*a),p=u+l,s="number"==typeof
+r&&p>=r;f(s?r:i),s||(d.current=requestAnimationFrame(c))},R=()=>{d.current&&cancelAnimationFrame(d.current),b.current&&clearTimeout(b.current),m.current=null},O=a((t=>{let
+r="number"==typeof
+t?t:u;R(),v.current=U(x({},v.current),{elapsedTimeRef:0,startAtRef:r}),f(r),e&&(d.current=requestAnimationFrame(c))}),[e,u]);return
+y((()=>{if(null==i||i(p),t&&p>=t){s.current+=1e3*t;let{shouldRepeat:e=!1,delay:r=0,newStartAt:n}=(null==l?void
+0:l(s.current/1e3))||{};e&&(b.current=setTimeout((()=>O(n)),1e3*r))}}),[p,t]),y((()=>(e&&(d.current=requestAnimationFrame(c)),R)),[e]),{elapsedTime:p,reset:O}};var
+b={easeInCubic:(e,t,r,n)=>(e/=n,r*e*e*e+t),easeOutCubic:(e,t,r,n)=>(e/=n,e--,r*(e*e*e+1)+t),linear:(e,t,r,n)=>r*e/n+t},v=b.easeOutCubic,L=e=>"function"==typeof
+e?e:b[e];var ee=(e,t)=>{if("number"==typeof e)return"number"==typeof
+t?t:2},$=(e,t)=>e.replace(/\B(?=(\d{3})+(?!\d))/g,t),k=e=>(e.toString().split(".")[1]||"").length,te=(e,t)=>{let
+r=k(e),n=k(t||1);return
+r>=n?r:n},w=({isCounting:e=!1,start:t=0,end:r,duration:n,decimalPlaces:a=te(t,r),decimalSeparator:u=".",thousandsSeparator:o="",onComplete:l,easing:i=v,formatter:p,updateInterval:f,onUpdate:s})=>{let
+d=ee(r,n),c=e=>{let n;if(0===d&&"number"==typeof r)n=r;else if("number"==typeof
+r&&"number"==typeof d){let a=L(i),u=e<d?e:d;n=a(u,t,r-t,d)}else
+n=t+e;if("function"==typeof p)return p(n);if(0===a){let
+e=Math.round(n).toString();return
+$(e,o)}let[l,f]=n.toFixed(a).split(".");return`${$(l,o)}${u}${f}`},{elapsedTime:m,reset:y}=h({isPlaying:e,duration:d,onComplete:l,updateInterval:f,onUpdate:"function"==typeof
+s?e=>s(c(e)):void 0});return{value:c(m),reset:y}};var B=e=>{var
+t=e,{children:r}=t,n=T(t,["children"]);let a=w(n);return"function"==typeof
+r?r(a):a.value};B.displayName="CountUp";export{B as CountUp,w as useCountUp};
+//# sourceMappingURL=index.module.js.map

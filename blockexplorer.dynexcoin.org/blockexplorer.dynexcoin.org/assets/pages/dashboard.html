@@ -1,0 +1,707 @@
+<div class="row">
+  <div class="col-xl-4">
+    <div class="card">
+      <div class="card-header border-0 align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">PoUW Metrics</h4>
+      </div>
+      <!-- end card header -->
+      <div class="card-header p-0 border-0 bg-light-subtle">
+        <div class="row g-0 text-center">
+          <div class="col-6 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="p-2 border border-dashed border-start-0">
+              <h5 class="mb-1">
+                <span class="counter-value" data-target="0" id="gpuCount"
+                  ><i class="mdi mdi-spin mdi-loading"></i
+                ></span>
+              </h5>
+              <p class="text-muted mb-0">Total GPUs</p>
+              <p class="text-muted mb-0">
+                <small><i>Connected</i></small>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+          <div class="col-6 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="p-2 border border-dashed border-start-0">
+              <h5 class="mb-1">
+                <span class="counter-value" data-target="0" id="pouwThisYear"
+                  ><i class="mdi mdi-spin mdi-loading"></i
+                ></span>
+              </h5>
+              <p class="text-muted mb-0">Total Jobs</p>
+              <p class="text-muted mb-0">
+                <small><i>Overall</i></small>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+          <div class="col-6 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="p-2 border border-dashed border-start-0">
+              <h5 class="mb-1">
+                <span class="counter-value" data-target="0" id="pouwThisMonth"
+                  ><i class="mdi mdi-spin mdi-loading"></i
+                ></span>
+              </h5>
+              <p class="text-muted mb-0">Total Jobs</p>
+              <p class="text-muted mb-0">
+                <small><i>This Month</i></small>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+          <div class="col-6 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="p-2 border border-dashed border-start-0 border-end-0">
+              <h5 class="mb-1">
+                <span
+                  class="counter-value"
+                  data-target="0"
+                  id="pouwDurThisMonth"
+                  ><i class="mdi mdi-spin mdi-loading"></i
+                ></span>
+              </h5>
+              <p class="text-muted mb-0">Average Duration</p>
+              <p class="text-muted mb-0">
+                <small><i>This Month</i></small>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+      </div>
+      <!-- end card header -->
+      <div class="card-body p-0 pb-2">
+        <div>
+          <div
+            id="audiences_metrics_charts"
+            data-colors='["--vz-success", "--vz-light"]'
+            class="apex-charts"
+            dir="ltr"
+          ></div>
+        </div>
+      </div>
+      <!-- end card body -->
+      <div class="card-footer p-0 border-0 bg-light-subtle">
+        <div class="row">
+          <div class="col-12">
+            <table class="table table-sm mb-0">
+              <tbody>
+                <tr>
+                  <td class="p-2" style="width: 45%">
+                    Total Block Fees Paid to Workers
+                  </td>
+                  <td class="p-2 text-end">
+                    <span
+                      class="counter-value"
+                      data-target="0"
+                      id="totalPouwFees"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2" style="width: 45%">
+                    Total Solution Fees Paid to Workers
+                  </td>
+                  <td class="p-2 text-end">
+                    <span
+                      class="counter-value"
+                      data-target="0"
+                      id="totalPouwSolutions"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2" style="width: 45%">
+                    Total Dev Fees Paid to Proton
+                  </td>
+                  <td class="p-2 text-end">
+                    <span
+                      class="counter-value"
+                      data-target="0"
+                      id="totalDevFees"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2" style="width: 45%">
+                    Current Average Block Fee to Compute
+                  </td>
+                  <td class="p-2 text-end">
+                    <span
+                      class="counter-value"
+                      data-target="0"
+                      id="avgBlockFeeCompute"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--end col-->
+          <div
+            class="col-4 col-xl-4 col-lg-4 col-md-4 col-sm-12"
+            style="display: none"
+          >
+            <div class="p-3 border border-dashed border-start-0">
+              <h5 class="mb-1">
+                <span class="counter-value" data-target="0" id="pouwThisMonth1"
+                  ><i class="mdi mdi-spin mdi-loading"></i
+                ></span>
+              </h5>
+              <p class="text-muted mb-0">Total Jobs</p>
+              <p class="text-muted mb-0">
+                <small><i>This Month</i></small>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+          <div
+            class="col-4 col-xl-4 col-lg-4 col-md-4 col-sm-12"
+            style="display: none"
+          >
+            <div class="p-3 border border-dashed border-start-0 border-end-0">
+              <h5 class="mb-1">
+                <span
+                  class="counter-value"
+                  data-target="0"
+                  id="pouwDurThisMonth1"
+                  ><i class="mdi mdi-spin mdi-loading"></i
+                ></span>
+              </h5>
+              <p class="text-muted mb-0">Average Duration</p>
+              <p class="text-muted mb-0">
+                <small><i>This Month</i></small>
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+      </div>
+      <!-- end card header -->
+    </div>
+    <!-- end card -->
+  </div>
+  <!-- end col -->
+
+  <div class="col-xl-8">
+    <div class="card card-height-100">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">Block Metrics (UTC)</h4>
+      </div>
+      <!-- end card header -->
+      <div class="card-body p-0">
+        <div>
+          <div
+            id="audiences-sessions-country-charts"
+            data-colors='["--vz-success", "--vz-info"]'
+            class="apex-charts"
+            dir="ltr"
+          ></div>
+        </div>
+      </div>
+      <!-- end cardbody -->
+    </div>
+    <!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+<div class="row">
+  <div class="col-xl-12 col-md-12">
+    <div class="card card-height-100">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">PoUW Job History</h4>
+      </div>
+      <!-- end card header -->
+      <div class="card-body">
+        <div class="table-responsive table-card">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar2">
+            <table
+              class="table align-middle table-borderless table-centered table-nowrap mb-0"
+            >
+              <thead class="text-muted table-light">
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">JobID</th>
+                  <th scope="col">Start</th>
+                  <th scope="col">End</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col" style="width: 20%">Description</th>
+                  <th scope="col" class="text-right">Chips</th>
+                  <th scope="col" class="text-right">Fee</th>
+                  <th scope="col" class="text-right">Workers</th>
+                  <th scope="col" class="text-right">Loc</th>
+                  <th scope="col" class="text-right">Energy</th>
+                  <th scope="col" class="text-right">Reward</th>
+                  <th scope="col" class="text-right">Status</th>
+                </tr>
+              </thead>
+              <tbody id="pouwJobHistory">
+                <tr>
+                  <td colspan="13"><i class="mdi mdi-spin mdi-loading"></i></td>
+                </tr>
+              </tbody>
+              <!-- end tbody -->
+            </table>
+            <!-- end table -->
+          </div>
+          <!-- end -->
+        </div>
+        <!-- end -->
+      </div>
+      <!-- end cardbody -->
+    </div>
+    <!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+<div class="row">
+  <div class="col-xxl-5">
+    <div class="d-flex flex-column h-100">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">HASH RATE</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="networkHashrate"
+                      data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i></span
+                    >/s
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">BLOCK HEIGHT</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="networkBlockHeight"
+                      data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+      </div>
+      <!-- end row-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">DIFFICULTY</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span class="counter-value" id="networkDiff" data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">AVERAGE BLOCK TIME</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="avgBlockTime"
+                      data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i></span
+                    >s
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">NETWORK BLOCK REWARD</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="networkReward"
+                      data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                    PRN
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">
+                    AVG 24H BLOCK REWARD (INCL. POUW FEES)
+                  </p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="networkReward2"
+                      data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                    PRN
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">LATEST BLOCK</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="lastestBlock"
+                      data-unixtime="N/A"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+
+        <div class="col-md-6">
+          <div class="card card-animate">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <p class="fw-medium text-muted mb-0">CONNECTED MINERS</p>
+                  <h2 class="mt-4 ff-secondary fw-semibold">
+                    <span
+                      class="counter-value"
+                      id="connectedMiners"
+                      data-target="0"
+                      ><i class="mdi mdi-spin mdi-loading"></i
+                    ></span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card-->
+        </div>
+        <!-- end col-->
+      </div>
+      <!-- end row-->
+    </div>
+  </div>
+  <!-- end col-->
+
+  <div class="col-xxl-7">
+    <div class="row h-100">
+      <div class="col-xl-6">
+        <div class="card card-height-100">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Stratum Metrics</h4>
+          </div>
+          <!-- end card header -->
+
+          <!-- card body -->
+          <div class="card-body">
+            <div
+              id="users-by-country"
+              data-colors='["--vz-light"]'
+              class="text-center"
+              style="height: 252px"
+            ></div>
+
+            <div class="table-responsive table-card mt-3">
+              <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table
+                  class="table table-borderless table-sm table-centered align-middle table-nowrap mb-1"
+                >
+                  <thead
+                    class="text-muted border-dashed border border-start-0 border-end-0 bg-light-subtle"
+                  >
+                    <tr>
+                      <th>Pool / Network</th>
+                      <th style="width: 20%" class="text-right">Workers</th>
+                      <th style="width: 20%" class="text-right">Share Ratio</th>
+                    </tr>
+                  </thead>
+                  <tbody class="border-0" id="poolWorkersData">
+                    <tr>
+                      <td colspan="3">
+                        <i class="mdi mdi-spin mdi-loading"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end card body -->
+        </div>
+        <!-- end card -->
+      </div>
+      <!-- end col -->
+
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="card card-height-100">
+              <div class="card-header align-items-center d-flex">
+                <h4 class="card-title mb-0 flex-grow-1">Hashrate History</h4>
+              </div>
+              <!-- end card header -->
+              <div class="card-body px-0" style="min-height: 200px">
+                <div
+                  id="hashrate-chart"
+                  data-colors='["--vz-success", "--vz-danger"]'
+                  class="apex-charts"
+                  dir="ltr"
+                ></div>
+              </div>
+            </div>
+            <!-- end card -->
+          </div>
+          <!-- end col-->
+          <div class="col-xl-12">
+            <div class="card card-height-100">
+              <div class="card-header align-items-center d-flex">
+                <h4 class="card-title mb-0 flex-grow-1">GPU Count History</h4>
+              </div>
+              <!-- end card header -->
+              <div class="card-body px-0" style="min-height: 200px">
+                <div
+                  id="compute-chart"
+                  data-colors='["--vz-success", "--vz-danger"]'
+                  class="apex-charts"
+                  dir="ltr"
+                ></div>
+              </div>
+            </div>
+            <!-- end card -->
+          </div>
+          <!-- end col-->
+        </div>
+        <!-- end row-->
+      </div>
+      <!-- end col-->
+    </div>
+    <!-- end row-->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row-->
+<div class="row">
+  <div class="col-xl-12 col-md-12">
+    <div class="card card-height-100">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">Latest Transactions</h4>
+      </div>
+      <!-- end card header -->
+      <div class="card-body">
+        <div class="table-responsive table-card">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar4">
+            <table
+              class="table align-middle table-borderless table-centered table-nowrap mb-0"
+            >
+              <thead class="text-muted table-light">
+                <tr>
+                  <th scope="col" style="width: 25%">TX</th>
+                  <th scope="col">From</th>
+                  <th scope="col">To</th>
+                  <th scope="col" class="text-right">Amount</th>
+                  <!--
+									<th scope="col" class="text-right">Inputs</th>
+									<th scope="col" class="text-right">DNX-In</th>
+									<th scope="col" class="text-right">Outputs</th>
+									<th scope="col" class="text-right">DNX-Out</th>
+									-->
+                  <th scope="col" class="text-right">Fee</th>
+                  <th scope="col" class="text-right">Unlock</th>
+                </tr>
+              </thead>
+              <tbody id="transactionsHistory">
+                <tr>
+                  <td colspan="6"><i class="mdi mdi-spin mdi-loading"></i></td>
+                </tr>
+              </tbody>
+              <!-- end tbody -->
+            </table>
+            <!-- end table -->
+          </div>
+          <!-- end -->
+        </div>
+        <!-- end -->
+      </div>
+      <!-- end cardbody -->
+    </div>
+    <!-- end card -->
+  </div>
+  <!-- end col -->
+  <div class="col-xl-12 col-md-12">
+    <div class="card card-height-100">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">Latest Blocks</h4>
+      </div>
+      <!-- end card header -->
+      <div class="card-body">
+        <div class="table-responsive table-card">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar2">
+            <table
+              class="table align-middle table-borderless table-centered table-nowrap mb-0"
+            >
+              <thead class="text-muted table-light">
+                <tr>
+                  <th scope="col">Block</th>
+                  <th scope="col">Timestamp</th>
+                  <th scope="col" style="width: 30%">Hash</th>
+                  <th scope="col" class="text-right">TXs</th>
+                  <th scope="col" class="text-right">Fees</th>
+                  <th scope="col" class="text-right">Reward</th>
+                  <th scope="col" class="text-right">Pool</th>
+                  <th scope="col" class="text-right">Unlock</th>
+                </tr>
+              </thead>
+              <tbody id="blockHistory">
+                <tr>
+                  <td colspan="8"><i class="mdi mdi-spin mdi-loading"></i></td>
+                </tr>
+              </tbody>
+              <!-- end tbody -->
+            </table>
+            <!-- end table -->
+          </div>
+          <!-- end -->
+        </div>
+        <!-- end -->
+      </div>
+      <!-- end cardbody -->
+    </div>
+    <!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-xl-12 col-md-12">
+    <div class="card card-height-100">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">Transactions in Mempool</h4>
+      </div>
+      <!-- end card header -->
+      <div class="card-body">
+        <div class="table-responsive table-card">
+          <div class="table-wrapper-scroll-y my-custom-scrollbar2">
+            <table
+              class="table align-middle table-borderless table-centered table-nowrap mb-0"
+            >
+              <thead class="text-muted table-light">
+                <tr>
+                  <th scope="col" style="width: 25%">Timestamp</th>
+                  <th scope="col" style="width: 30%">Hash</th>
+                  <th scope="col" class="text-right">Amount</th>
+                  <th scope="col" class="text-right">Fee</th>
+                  <th scope="col" class="text-right">Size</th>
+                </tr>
+              </thead>
+              <tbody id="mempoolHistory">
+                <tr>
+                  <td colspan="5"><i class="mdi mdi-spin mdi-loading"></i></td>
+                </tr>
+              </tbody>
+              <!-- end tbody -->
+            </table>
+            <!-- end table -->
+          </div>
+          <!-- end -->
+        </div>
+        <!-- end -->
+      </div>
+      <!-- end cardbody -->
+    </div>
+    <!-- end card -->
+  </div>
+  <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="hidden">
+  <div
+    id="usageGraph"
+    data-colors='["--vz-success", "--vz-info"]'
+    class="apex-charts hidden"
+    dir="ltr"
+  ></div>
+  <div
+    id="creditRemain"
+    data-colors='["--vz-success", "--vz-danger"]'
+    class="apex-charts hidden"
+    dir="ltr"
+  ></div>
+</div>
+<script>
+  $(".app-search2").show();
+</script>

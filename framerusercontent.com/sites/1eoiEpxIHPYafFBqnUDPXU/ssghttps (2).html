@@ -1,0 +1,29 @@
+import{jsx as _jsx,jsxs as
+_jsxs}from"react/jsx-runtime";import{AnimatePresence,motion}from"framer-motion";const
+AccordionItem=({item,idx,activeIndex,handleClick})=>{// Active State const
+active=idx===activeIndex;// Button ID : Must be unique to each accordion. const
+buttonId=`button-${idx}`;// Panel ID : Must be unique to each accordion const
+panelId=`panel-${idx}`;// Framer Motion Variants const
+variants={active:{height:"auto",marginTop:"1rem",y:0,opacity:1},inactive:{height:0,marginTop:"0rem",y:-20,opacity:0}};const
+buttonStyle={border:0,margin:0,padding:0,width:"100%",display:"flex",fontFamily:'"Rigid
+Square Regular",
+Inter',textTransform:"uppercase",textAlign:"left",fontSize:"24px",background:"transparent",color:"white",cursor:"pointer",originY:0,opacity:active&&idx===activeIndex?1:.6};return
+item.title&&/*#__PURE__*/
+_jsxs("li",{className:"accordion__item",style:{width:"100%",borderBottom:"1px
+solid rgba(255,255,255,0.1)",padding:"0 0 32px 0"},children:[/*#__PURE__*/
+_jsx(motion.button,{id:buttonId,// Aria Controls - Denotes what element this
+element controls "aria-controls":panelId,// Aria Expanded - Denotes the expanded
+state of the element this element controls "aria-expanded":active,// On Click,
+pass the index back up to the parent component onClick:()=>handleClick(idx),//
+transition={{ duration: 0.25 }}
+whileHover:{letterSpacing:"1px"},style:buttonStyle,children:/*#__PURE__*/
+_jsx("span",{className:"t-heading",style:{margin:0,padding:0},children:item.title})}),/*#__PURE__*/
+_jsx(AnimatePresence,{children:active&&/*#__PURE__*/
+_jsx(motion.div,{id:panelId,// Aria Labelled By - Denotes what element this
+element is controlled by
+"aria-labelledby":buttonId,initial:"inactive",animate:"active",exit:"inactive",variants:variants,transition:{type:"spring",stiffness:500,damping:60,transformOrigin:"0
+0"},style:{overflow:"hidden",fontSize:"18px",color:"rgba(255,255,255,0.7)"},children:/*#__PURE__*/
+_jsx("div",{style:{fontFamily:"Rubik",lineHeight:"150%"},children:item.body})})})]});};export{AccordionItem};
+export const __FramerMetadata__ =
+{"exports":{"AccordionItem":{"type":"variable","annotations":{"framerContractVersion":"1"}},"__FramerMetadata__":{"type":"variable"}}}
+//# sourceMappingURL=./AccordionItem.map

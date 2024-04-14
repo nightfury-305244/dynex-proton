@@ -1,0 +1,93 @@
+import * as React from "react" import * as ReactDOM from "react-dom/client"
+import * as Framer from "framer" window.__framer_importFromPackage =
+(packageAndFilename, exportIdentifier) => () => { return
+React.createElement(Framer.ErrorPlaceholder, { error: 'Package component not
+supported: "' + exportIdentifier + '" in "' + packageAndFilename + '"' }) } // A
+lot of libraries assume process.env.NODE_ENV is present in runtime/buildtime, so
+we are polyfilling it window.process = { ...window.process, env: {
+...(window.process ? window.process.env: undefined), NODE_ENV: "production" } }
+// Fallback support for stack gaps Framer.installFlexboxGapWorkaroundIfNeeded()
+window.__framer_events = window.__framer_events || [] function track() {
+window.__framer_events.push(arguments) } ;(async () => { const routes =
+{augiA20Il: {elements: {MJBjBDvtX: "roadmap", vm_qgIZY9: "live"}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/zX9jYlafjS6YcgfgHDyI/i9K5CY5GDylW0mL1ez2B/augiA20Il.js")),
+path: "/"}, fyxHY82ZH: {elements: {IEMPt7BBw: "live"}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/d5Ai5bS7Dt8FyHz5AG0D/lK5DCiLxA5ryE34E2N4V/fyxHY82ZH.js")),
+path: "/about"}, cWoFoNZEk: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/DLUPv77Z2ZxJzOLkjXCk/a71Rds86OmmOG28AzcY2/cWoFoNZEk.js")),
+path: "/how-it-works"}, k5VRHciV7: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/gIaFEzdAp7Y4rbL4IFas/EWdTFWnPmsOUb91z02jc/k5VRHciV7.js")),
+path: "/use"}, s3i5rh3Vt: {elements: {JaZgAaeHW: "exchanges", pW1NbyMLj:
+"mining", w1QuW_b1F: "wallets"}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/cndcp74q5KOPm2sEOdfe/7ZDVwq4W4SRHiRgLFTnM/s3i5rh3Vt.js")),
+path: "/get-dnx"}, YA_HGMM5Q: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/bJVuJ6pmaG1sRNgvTlu0/eFKFP7Cj5g9GP5EViaRH/YA_HGMM5Q.js")),
+path: "/learn"}, T46i7cvSN: {elements: {xcgVSkoT8: "roadmap"}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/jnQlcuZHznlmDrIO9kJ3/NSShS17MtOnhsDzDVfkA/T46i7cvSN.js")),
+path: "/roadmap"}, KBlFSas6i: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/14M1oSOkbjULkavs8N6T/l3PrlR2UHdZ0fwaDbgUC/KBlFSas6i.js")),
+path: "/404"}, s6YWe3VcZ: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/VuNr7dBeFnDAHdRzW97p/2ELvUPmw4kqwMm7twu2y/s6YWe3VcZ.js")),
+path: "/linktree"}, hwduVZjG7: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/VFcaaX28ID4xDdAH61u7/3BFtRooOZnUqahQC7J33/hwduVZjG7.js")),
+path: "/compute"}, fq_60Soak: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/lfxgyprxsp90K21t8bSA/Jif75DcIEm9siOaHB1Pn/fq_60Soak.js")),
+path: "/testimonials/china-unicom"}, Ewjlo5SkX: {elements: {}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/yD7ekSEG6OqhKfvSozl3/NqayUgIlGcokSDmN48ju/Ewjlo5SkX.js")),
+path: "/testimonials/cali-global"}, Z7xj05gHM: {elements: {}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/DmSkRKL6FkXEpVOolDkW/0n8rPciveuadq3bDtXKW/Z7xj05gHM.js")),
+path: "/testimonials/harmony-investment"}, FNpWxqPmy: {elements: {}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/GBRtO321qSlsERc4n1EG/ldoJa4zsPxH0Oebxj2Wx/FNpWxqPmy.js")),
+path: "/testimonials/jiangsu-qidong"}, UvUGc8lZk: {elements: {}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/yMLKHYLoo0csFnvQ16yC/1T6Lq3hkyVcdXnrdhf50/UvUGc8lZk.js")),
+path: "/supercomputing-for-everyone"}, F8eGhiphC: {collectionId: "Ky33JdLXg",
+elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/H9xkVrT0DZJTOdpxRFv3/QjBnjZYbF08l5LA30pqK/F8eGhiphC.js")),
+path: "/learn/:pNMeoxCGX"}, EYOX8zGOM: {page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/d7wlTOSRC4PZg9EX4Wm2/YPiz9WxMiI57msWochHh/EYOX8zGOM.js"))}}
+const collectionUtils = {Ky33JdLXg: async () => (await
+import("https://framerusercontent.com/modules/LETft4k4RtbC71ybVcas/Patom20VnNo4HcVYkqih/Ky33JdLXg.js"))?.["utils"]}
+const locales = [{code: "en", id: "default", name: "English", slug: ""}, {code:
+"tr", id: "oDJvo1yNO", name: "Turkish", slug: "tr"}] const notFoundPage =
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/14M1oSOkbjULkavs8N6T/l3PrlR2UHdZ0fwaDbgUC/KBlFSas6i.js"))
+const container = document.getElementById("main") let routeId, localeId,
+pathVariables, shouldHydrate = false if ("framerHydrateV2" in container.dataset)
+{ const routeData = JSON.parse(container.dataset.framerHydrateV2) routeId =
+routeData.routeId localeId = routeData.localeId pathVariables =
+routeData.pathVariables shouldHydrate = true } else { const routeData =
+Framer.inferInitialRouteFromPath(routes, decodeURIComponent(location.pathname),
+true, locales) routeId = routeData.routeId localeId = routeData.localeId
+pathVariables = routeData.pathVariables } const route = routes[routeId] const
+RootComponent = await route.page.preload() routes[routeId].page = RootComponent
+const content = React.createElement( Framer.PageRoot, { RootComponent,
+isWebsite: true, routeId, pathVariables, routes, collectionUtils, notFoundPage,
+isReducedMotion: undefined, localeId, locales, preserveQueryParams: undefined,
+enableSuspenseThatPreservesDom: true, shouldMarkHydrationEnd: shouldHydrate, } )
+const contentWithFeaturesContext = React.createElement(
+Framer.LibraryFeaturesProvider, { children: content, value:
+{imgSizesWorkaroundEnabled: false} } ) const page =
+React.createElement(Framer.PageEffectsProvider, { children:
+contentWithFeaturesContext, value: {global: {enter: {mask: {angle: 0, type:
+"wipe", width: "100%"}, opacity: 1, rotate: 0, rotate3d: false, rotateX: 0,
+rotateY: 0, scale: 1, transition: {damping: 30, delay: 0, duration: 0.4, ease:
+[0.27, 0, 0.51, 1], mass: 1, stiffness: 400, type: "tween"}, x: "0px", y:
+"0px"}}, routes: {F8eGhiphC: {augiA20Il: {enter: {opacity: 0, rotate: 0,
+rotate3d: false, rotateX: 0, rotateY: 0, scale: 1, transition: {damping: 30,
+delay: 0, duration: 0.2, ease: [0.27, 0, 0.51, 1], mass: 1, stiffness: 400,
+type: "tween"}, x: "0px", y: "0px"}, exit: {mask: {angle: 120, type: "wipe",
+width: "40%"}, opacity: 0, rotate: 0, rotate3d: false, rotateX: 0, rotateY: 0,
+scale: 1, transition: {damping: 30, delay: 0, duration: 0.2, ease: [0.27, 0,
+0.51, 1], mass: 1, stiffness: 400, type: "tween"}, x: "0px", y: "0px"}}}}} }) if
+(shouldHydrate) { React.startTransition(() => {
+performance.mark("framer-hydration-start") ReactDOM.hydrateRoot(container, page)
+}) } else { ReactDOM.createRoot(container).render(page) } })().catch(error => {
+track("published_site_load_error", { message: String(error), stack: error
+instanceof Error && typeof error.stack === "string" ? error.stack : null })
+throw error })

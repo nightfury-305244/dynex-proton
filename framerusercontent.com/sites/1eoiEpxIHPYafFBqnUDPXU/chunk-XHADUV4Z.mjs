@@ -844,43 +844,6 @@ var Ke = ({ value: n, children: t }) => {
                         }),
                       ],
                     }),
-                    O() &&
-                      e(k, {
-                        __fromCanvasComponent: !0,
-                        children: e(v, {
-                          children: l(r.p, {
-                            className: "framer-styles-preset-11ut0g7",
-                            "data-styles-preset": "Auy8Lx_6q",
-                            style: {
-                              "--framer-text-alignment": "right",
-                              "--framer-text-color":
-                                "var(--extracted-r6o4lv, var(--token-50859c1e-b9ab-4124-b93a-6ea1cca8c715, rgb(98, 103, 111)))",
-                            },
-                            children: [
-                              "Design: ",
-                              e(c, {
-                                href: "https://monofactor.com/",
-                                openInNewTab: !0,
-                                smoothScroll: !1,
-                                children: e(r.a, {
-                                  className: "framer-styles-preset-1wicq5s",
-                                  "data-styles-preset": "ro7OPezbn",
-                                  children: "Onur Oztaskiran",
-                                }),
-                              }),
-                            ],
-                          }),
-                        }),
-                        className: "framer-yy1c5n",
-                        layoutDependency: a,
-                        layoutId: "jn8Kx6nNz",
-                        style: {
-                          "--extracted-r6o4lv":
-                            "var(--token-50859c1e-b9ab-4124-b93a-6ea1cca8c715, rgb(98, 103, 111))",
-                        },
-                        verticalAlignment: "top",
-                        withExternalLayout: !0,
-                      }),
                   ],
                 }),
               ],

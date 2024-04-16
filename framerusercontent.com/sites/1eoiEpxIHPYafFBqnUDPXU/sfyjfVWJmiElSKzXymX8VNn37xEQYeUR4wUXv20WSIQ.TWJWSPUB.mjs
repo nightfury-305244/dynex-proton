@@ -1665,7 +1665,7 @@ var ja = {
                                         QOAMZflI5: p[0],
                                         s3TC2p5g4: !1,
                                         style: { width: "100%" },
-                                        u1kTRXq9c: "Mine DNX",
+                                        u1kTRXq9c: "Mine PTN",
                                         variant: "KTGUhjkEK",
                                         width: "100%",
                                         X4tzEOP4z: !1,
@@ -2386,7 +2386,7 @@ var ja = {
                               children: r("p", {
                                 children: [
                                   "A maximum of ",
-                                  e("strong", { children: "110.000.000 DNX " }),
+                                  e("strong", { children: "110.000.000 PTN " }),
                                   "utility coins with a deflationary emission schedule.",
                                 ],
                               }),

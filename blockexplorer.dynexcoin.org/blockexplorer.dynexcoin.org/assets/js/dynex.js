@@ -673,7 +673,7 @@ function loadInfo(
               totalAmountIn = totalAmountIn / 1000000000;
               if (totalAmountIn > 0) {
                 txTemplate += '<td class="pt-1 pb-1 text-right">';
-                txTemplate += "<span>" + totalAmountIn + " PRN</span>";
+                txTemplate += "<span>" + totalAmountIn + " PTN</span>";
                 txTemplate += "</td>";
               }
               txTemplate += "</tbody>";
@@ -725,7 +725,7 @@ function loadInfo(
                   "</a>";
                 txTemplate += "</td>";
                 txTemplate += '<td class="pt-1 pb-1 text-right">';
-                txTemplate += "<span>" + totalAmountOut + " PRN</span>";
+                txTemplate += "<span>" + totalAmountOut + " PTN</span>";
                 txTemplate += "</td>";
                 txTemplate += "</tr>";
               });
@@ -749,11 +749,11 @@ function loadInfo(
             if (theResult["address_from"] == "") {
               txTemplate += "<tr>";
               txTemplate += "<td>Total In</td>";
-              txTemplate += "<td class='text-right'>" + totalIn + " PRN</td>";
+              txTemplate += "<td class='text-right'>" + totalIn + " PTN</td>";
               txTemplate += "</tr>";
               txTemplate += "<tr>";
               txTemplate += "<td>Total Out</td>";
-              txTemplate += "<td class='text-right'>" + totalOut + " PRN</td>";
+              txTemplate += "<td class='text-right'>" + totalOut + " PTN</td>";
               txTemplate += "</tr>";
             }
             txTemplate += "<tr>";
@@ -761,7 +761,7 @@ function loadInfo(
             txTemplate +=
               "<td class='text-right'>" +
               theResult["fee"] / 1000000000 +
-              " PRN</td>";
+              " PTN</td>";
             txTemplate += "</tr>";
             txTemplate += "</table>";
             txTemplate += "</div>";
@@ -800,7 +800,7 @@ function loadInfo(
                 txTemplate +=
                   "<td class='text-right'>" +
                   item["data"]["input"]["amount"] / 1000000000 +
-                  " PRN</td>";
+                  " PTN</td>";
                 txTemplate += "</tr>";
               }
             });
@@ -833,7 +833,7 @@ function loadInfo(
               txTemplate +=
                 "<td class='text-right'>" +
                 item["output"]["amount"] / 1000000000 +
-                " PRN</td>";
+                " PTN</td>";
               txTemplate += "</tr>";
             });
             txTemplate += "</tbody>";
@@ -896,10 +896,10 @@ function loadInfo(
           walletTotalSent = theResult["amount_out"] / 1000000000;
           walletTotalFees = theResult["fees"] / 1000000000;
           // Set all HTML Variables
-          $("#totalWalletBalance").html(walletBalance + " PRN");
-          $("#totalWalletReceived").html(walletTotalReceived + " PRN");
-          $("#totalWalletSent").html(walletTotalSent + " PRN");
-          $("#totalWalletFees").html(walletTotalFees + " PRN");
+          $("#totalWalletBalance").html(walletBalance + " PTN");
+          $("#totalWalletReceived").html(walletTotalReceived + " PTN");
+          $("#totalWalletSent").html(walletTotalSent + " PTN");
+          $("#totalWalletFees").html(walletTotalFees + " PTN");
 
           var walletOwner = walletLookup(opt2);
           if (walletOwner != undefined && walletOwner.length > 0) {
@@ -1069,7 +1069,7 @@ function loadInfo(
             walletTemplate +=
               '<div class="text-right">Fee: ' +
               parseFloat(theResult[index]["fee"]) / 1000000000 +
-              " PRN</div>";
+              " PTN</div>";
             walletTemplate += "</div>";
             walletTemplate += '<div class="col-2">';
             walletTemplate +=
@@ -1144,7 +1144,7 @@ function loadInfo(
             totalAmountIn = totalAmountIn / 1000000000;
             if (totalAmountIn > 0) {
               walletTemplate += '<td class="pt-1 pb-1 text-right">';
-              walletTemplate += "<span>" + totalAmountIn + " PRN</span>";
+              walletTemplate += "<span>" + totalAmountIn + " PTN</span>";
               walletTemplate += "</td>";
             }
             walletTemplate += "</tbody>";
@@ -1205,7 +1205,7 @@ function loadInfo(
               }
               walletTemplate += "</td>";
               walletTemplate += '<td class="pt-1 pb-1 text-right">';
-              walletTemplate += "<span>" + totalAmountOut + " PRN</span>";
+              walletTemplate += "<span>" + totalAmountOut + " PTN</span>";
               walletTemplate += "</td>";
               walletTemplate += "</tr>";
             });
@@ -1306,12 +1306,12 @@ function loadInfo(
           blkTemplate +=
             "<td class='text-right'>" +
             theResult["reward"] / 1000000000 +
-            " DNX</td>";
+            " PTN</td>";
           blkTemplate += "</tr>";
           blkTemplate += "<tr>";
           blkTemplate += "<td>Total Fees</td>";
           blkTemplate +=
-            "<td class='text-right'>" + totalFees / 1000000000 + " PRN</td>";
+            "<td class='text-right'>" + totalFees / 1000000000 + " PTN</td>";
           blkTemplate += "</tr>";
           blkTemplate += "</table>";
           blkTemplate += "</div>";
@@ -1720,20 +1720,20 @@ function loadBlockchain() {
     "https://api.market.dynexcoin.org/api/v2/network/jobs/avg_fee";
   $.get(endpointURL2, function (data, status) {
     $("#avgBlockFeeCompute")
-      .html(formatNumbers(formatDNX(data["avg_fee"], 3)) + " PRN")
+      .html(formatNumbers(formatDNX(data["avg_fee"], 3)) + " PTN")
       .attr("data-target", data["avg_fee"]);
   });
   var endpointURL3 =
     "https://api.market.dynexcoin.org/api/v2/network/jobs/payment_stats";
   $.get(endpointURL3, function (data, status) {
     $("#totalPouwSolutions")
-      .html(formatNumbers(formatDNX(data["solution_fee"], 3)) + " PRN")
+      .html(formatNumbers(formatDNX(data["solution_fee"], 3)) + " PTN")
       .attr("data-target", data["solution_fee"]);
     $("#totalDevFees")
-      .html(formatNumbers(formatDNX(data["dev_fee"], 3)) + " PRN")
+      .html(formatNumbers(formatDNX(data["dev_fee"], 3)) + " PTN")
       .attr("data-target", data["dev_fee"]);
     $("#totalPouwFees")
-      .html(formatNumbers(formatDNX(data["block_fee"], 3)) + " PRN")
+      .html(formatNumbers(formatDNX(data["block_fee"], 3)) + " PTN")
       .attr("data-target", data["totalPouwFees"]);
   });
   var endpointURL4 =
@@ -2968,7 +2968,7 @@ function loadRichlist() {
     $("#totalBalance")
       .html(
         formatNumbers(Math.floor(dataCleaned.total_balance / 1000000000)) +
-          " PRN"
+          " PTN"
       )
       .attr("data-target", dataCleaned.total_balance);
     $("#lastUpdate")
@@ -3014,7 +3014,7 @@ function loadRichlist() {
       richlistTemplate +=
         "<td  class='text-right'>" +
         formatNumbers(Math.floor(item["balance"] / 1000000000)) +
-        " PRN</td>";
+        " PTN</td>";
       richlistTemplate += "</tr>";
     });
     $("#richlistTBL").html(richlistTemplate);

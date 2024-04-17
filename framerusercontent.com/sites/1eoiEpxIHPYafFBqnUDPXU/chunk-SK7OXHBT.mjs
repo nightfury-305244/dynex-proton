@@ -5511,7 +5511,7 @@ var $t = (a, r) => `translateX(-50%) ${r}`,
                 layoutDependency: i,
                 layoutId: "V0PFipYyH-container",
                 children: e(Ge, {
-                  eAW3DGEn9: "https://live.dynexcoin.org/",
+                  eAW3DGEn9: "https://live.protoncoin.tech/",
                   height: "100%",
                   Hj7DCPnJa: !0,
                   id: "V0PFipYyH",

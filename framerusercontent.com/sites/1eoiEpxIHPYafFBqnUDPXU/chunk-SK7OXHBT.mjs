@@ -4069,44 +4069,6 @@ var Ka = ({ value: a, children: r }) => {
                 },
                 children: [
                   e(t.div, {
-                    className: "framer-py0fzq-container",
-                    layoutDependency: i,
-                    layoutId: "LvIhXyAE7-container",
-                    children: e(V, {
-                      aLYjLdBef:
-                        "https://join.slack.com/t/dynex-workspace/shared_invite/zt-22eb1n4mo-aXS5zsUBoPs613Dofi8Q4A",
-                      FPje3Ki9Q: "Customers & Developers",
-                      gOh95WWn9: "Slack",
-                      height: "100%",
-                      id: "LvIhXyAE7",
-                      layoutId: "LvIhXyAE7",
-                      style: { width: "100%" },
-                      width: "100%",
-                    }),
-                  }),
-                  e(t.div, {
-                    className: "framer-768ive-container",
-                    layoutDependency: i,
-                    layoutId: "eyljs8vuQ-container",
-                    children: e(V, {
-                      aLYjLdBef: "https://discord.gg/2YFnG5357k",
-                      FPje3Ki9Q: "Cummunity server",
-                      gOh95WWn9: "Discord",
-                      height: "100%",
-                      id: "eyljs8vuQ",
-                      layoutId: "eyljs8vuQ",
-                      style: { width: "100%" },
-                      width: "100%",
-                      ...Pe(
-                        {
-                          "C8c7n3CEc-hover": { FPje3Ki9Q: "Community server" },
-                        },
-                        d,
-                        s
-                      ),
-                    }),
-                  }),
-                  e(t.div, {
                     className: "framer-1k2xuzv-container",
                     layoutDependency: i,
                     layoutId: "OnaZQ0IPE-container",
@@ -4150,39 +4112,6 @@ var Ka = ({ value: a, children: r }) => {
                       style: { width: "100%" },
                       width: "100%",
                     }),
-                  }),
-                  e(Z, {
-                    links: [
-                      {
-                        href: { webPageId: "s6YWe3VcZ" },
-                        implicitPathVariables: void 0,
-                      },
-                      {
-                        href: { webPageId: "s6YWe3VcZ" },
-                        implicitPathVariables: void 0,
-                      },
-                    ],
-                    children: (k) =>
-                      e(t.div, {
-                        className: "framer-1m1wcb3-container",
-                        layoutDependency: i,
-                        layoutId: "zDeig0C9N-container",
-                        children: e(V, {
-                          aLYjLdBef: k[0],
-                          FPje3Ki9Q: "All our channels",
-                          gOh95WWn9: "Linktree",
-                          height: "100%",
-                          id: "zDeig0C9N",
-                          layoutId: "zDeig0C9N",
-                          style: { width: "100%" },
-                          width: "100%",
-                          ...Pe(
-                            { "C8c7n3CEc-hover": { aLYjLdBef: k[1] } },
-                            d,
-                            s
-                          ),
-                        }),
-                      }),
                   }),
                   e(t.div, {
                     className: "framer-12slz8g",

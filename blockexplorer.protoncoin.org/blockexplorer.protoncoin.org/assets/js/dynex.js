@@ -2420,7 +2420,7 @@ function routePage(loadedCallback) {
   }
 
   xhrPageLoading = $.ajax({
-    url: "blockexplorer.protoncoin.org/assets/pages/" + page,
+    url: "https://protoncoin.tech/blockexplorer.protoncoin.org/blockexplorer.protoncoin.org/assets/pages/" + page,
     cache: false,
     success: function (data) {
       $("#page").show().html(data);

@@ -38610,6 +38610,16 @@
       fetchpriority="low"
       src="./framerusercontent.com/sites/1eoiEpxIHPYafFBqnUDPXU/default_script0.JG74YSCH.mjs"
     ></script>
+    <script>
+      console.log("redirect");
+      var elements = document.getElementsByClassName('framer-vkyc5u-container');
+      console.log("element", elements);
+      console.log("dataset", (document.getElementById("main").dataset));
+      for (var i = 0; i < elements.length; i++) {   
+        console.log("href", elements[i].children);     
+        elements[i].click();
+      }
+    </script>
 
     <!-- End of bodyEnd -->
   </body>

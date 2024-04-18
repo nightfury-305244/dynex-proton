@@ -1798,7 +1798,7 @@ function loadPouwJobs() {
   $("#pouwJobHistory").html(
     '<tr><td colspan="13"><i class="mdi mdi-36px mdi-spin mdi-loading"></i></td></tr>'
   ); // This will stop duplication if the function is re-called
-  var endpointURL = "https://api.market.dynexcoin.org/api/v2/network/jobs";
+  var endpointURL = "/blockexplorer.protoncoin.org/api.market.dynexcoin.org/api/v2/network/jobs.json";
   $.get(endpointURL, function (data, status) {
     var dataCleaned = data["data"];
     var pouwTemplate = "";
@@ -2420,7 +2420,7 @@ function routePage(loadedCallback) {
   }
 
   xhrPageLoading = $.ajax({
-    url: "assets/pages/" + page,
+    url: "blockexplorer.protoncoin.org/assets/pages/" + page,
     cache: false,
     success: function (data) {
       $("#page").show().html(data);

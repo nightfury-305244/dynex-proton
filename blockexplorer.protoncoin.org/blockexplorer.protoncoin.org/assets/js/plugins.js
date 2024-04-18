@@ -5,10 +5,10 @@
     "<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/toastify-js'></script>"
   ),
   document.writeln(
-    "<script type='text/javascript' src='assets/libs/choices.js/public/assets/scripts/choices.min.js'></script>"
+    "<script type='text/javascript' src='blockexplorer.protoncoin.org/assets/libs/choices.js/public/assets/scripts/choices.min.js'></script>"
   ),
   document.writeln(
-    "<script type='text/javascript' src='assets/libs/flatpickr/flatpickr.min.js'></script>"
+    "<script type='text/javascript' src='blockexplorer.protoncoin.org/assets/libs/flatpickr/flatpickr.min.js'></script>"
   ));
 
 /* eslint no-extend-native: 0 */

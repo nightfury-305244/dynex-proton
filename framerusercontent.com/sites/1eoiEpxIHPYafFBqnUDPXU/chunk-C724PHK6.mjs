@@ -560,7 +560,7 @@ var Ke = ({ value: n, children: t }) => {
                                   "var(--extracted-r6o4lv, var(--token-50859c1e-b9ab-4124-b93a-6ea1cca8c715, rgb(98, 103, 111)))",
                               },
                               children: e(c, {
-                                href: "https://live.dynexcoin.org/en/terms-and-conditions",
+                                href: "https://live.protoncoin.org/terms-and-conditions",
                                 openInNewTab: !0,
                                 smoothScroll: !1,
                                 children: e(r.a, {
@@ -593,7 +593,7 @@ var Ke = ({ value: n, children: t }) => {
                                         "var(--extracted-r6o4lv, var(--token-50859c1e-b9ab-4124-b93a-6ea1cca8c715, rgb(98, 103, 111)))",
                                     },
                                     children: e(c, {
-                                      href: "https://live.dynexcoin.org/en/terms-and-conditions",
+                                      href: "https://live.protoncoin.org/terms-and-conditions",
                                       openInNewTab: !0,
                                       smoothScroll: !1,
                                       children: e(r.a, {
@@ -622,7 +622,7 @@ var Ke = ({ value: n, children: t }) => {
                                   "var(--extracted-r6o4lv, var(--token-50859c1e-b9ab-4124-b93a-6ea1cca8c715, rgb(98, 103, 111)))",
                               },
                               children: e(c, {
-                                href: "https://live.dynexcoin.org/en/privacy-policy",
+                                href: "https://live.protoncoin.org/privacy-policy",
                                 openInNewTab: !0,
                                 smoothScroll: !1,
                                 children: e(r.a, {
@@ -655,7 +655,7 @@ var Ke = ({ value: n, children: t }) => {
                                         "var(--extracted-r6o4lv, var(--token-50859c1e-b9ab-4124-b93a-6ea1cca8c715, rgb(98, 103, 111)))",
                                     },
                                     children: e(c, {
-                                      href: "https://live.dynexcoin.org/en/privacy-policy",
+                                      href: "https://live.protoncoin.org/privacy-policy",
                                       openInNewTab: !0,
                                       smoothScroll: !1,
                                       children: e(r.a, {
